@@ -1,6 +1,0 @@
-PLATFORMS
-  x86_64-linux
-
-DEPENDENCIES
-  puma (~> 6.0)
-  rails (~> 7.1.0)
