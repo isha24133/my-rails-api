@@ -1,0 +1,18 @@
+# DATABASE_URL が設定されている場合、Rails が自動的にその接続情報で上書きします。
+# 未設定のときは SQLite ファイルに保存します。
+default: &default
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: storage/development.sqlite3
+
+test:
+  <<: *default
+  database: storage/test.sqlite3
+
+production:
+  <<: *default
+  database: <%= ENV.fetch("SQLITE_PATH") { "storage/production.sqlite3" } %>

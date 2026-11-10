@@ -1,0 +1,17 @@
+# Rails
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+/tmp/pids/*
+!/tmp/pids/.keep
+/storage/*.sqlite3
+/storage/*.sqlite3-*
+/public/assets
+config/master.key
+.env
+
+# OS / editor
+.DS_Store
+.idea
+.vscode
